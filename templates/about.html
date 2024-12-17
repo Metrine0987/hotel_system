@@ -1,0 +1,62 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block title%}  About {%endblock%}
+
+{%block content%}
+
+ <!-- About Section -->
+ <section id="about" class="about section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>About Us</h2>
+      <p>We believe in transparent, honest communication and delivering on our promises.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+      <div class="row gy-3">
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <img src="{% static '/assets/img/web-design-2906159_1280.jpg' %}" alt="" class="img-fluid">
+        </div>
+
+        <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="about-content ps-0 ps-lg-3">
+            <h3>We push the boundaries of design to deliver fresh, innovative solutions.</h3>
+            <p class="fst-italic">
+              we are a passionate team of skilled designers and developers dedicated to crafting innovative and user-friendly websites.
+            </p>
+            <ul>
+              <li>
+                <i class="bi bi-diagram-3"></i>
+                <div>
+                  <h4>Custom Web Design </h4>
+                  <p> We believe in making the digital world a more beautiful and functional place, one website at a time.</p>
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-fullscreen-exit"></i>
+                <div>
+                  <h4> Responsive Design</h4>
+                  <p> Our websites are fully responsive, ensuring seamless user experiences across all devices.</p>
+                </div>
+              </li>
+            </ul>
+            <p>
+              We focus on user-centered design principles to ensure your website is intuitive, easy to navigate, and engaging.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section><!-- /About Section -->
+
+
+
+
+{%endblock%}

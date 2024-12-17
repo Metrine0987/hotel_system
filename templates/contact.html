@@ -1,0 +1,91 @@
+{%extends 'base.html'%}
+{%load static%}
+{% block title%} Contact {%endblock%}
+ 
+ 
+ 
+ {%block content%}
+ 
+ <!-- Contact Section -->
+ <section id="contact" class="contact section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Contact</h2>
+      <p>Feel free to contact us, and we will get back to you as soon as possible.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-5">
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Address</h3>
+              <p>P.O BOX 972-6200,MERU</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Call Us</h3>
+              <p>+254 07123456798</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email Us</h3>
+              <p>info@must.ac.ke</p>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+        <div class="col-lg-7">
+          <form action=" " method="post"  role="form" class="form-control" >
+            {% csrf_token %}
+            <div class="row gy-4">
+
+              <div class="col-md-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text"  id="name"  name="name"   class="form-control" placeholder="Your Name" required="">
+              </div>
+
+              <div class="col-md-6 ">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email"    name="email" class="form-control"   placeholder="Your Email" required="">
+              </div>
+
+              <div class="col-md-12">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" id="subject"    name="subject" class="form-control"  placeholder="Subject" required="">
+              </div>
+
+              <div class="col-md-12">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Message" required=""></textarea>
+              </div>
+              
+              <div class="col-md-12 text-center">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                <button type="submit">Send Message</button>
+              </div>
+
+            </div>
+          </form>
+        </div><!-- End Contact Form -->
+    </div>
+
+</div>
+
+</section><!-- /Contact Section -->
+
+{%endblock%}

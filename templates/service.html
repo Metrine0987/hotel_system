@@ -1,0 +1,90 @@
+{%extends 'base.html'%}
+{%load static%}
+{% block title%} Service {%endblock%}
+
+  {%block content%}
+
+    <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Service Details</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'myapp:home' %}">Home</a></li>
+            <li class="current">Service Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="service-box">
+              <h4>Serices List</h4>
+              <div class="services-list">
+                <a href="#" class="active"><i class="bi bi-arrow-right-circle"></i><span>Web Design</span></a>
+                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Web Design</span></a>
+                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Product Management</span></a>
+                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Graphic Design</span></a>
+                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Marketing</span></a>
+              </div>
+            </div><!-- End Services List -->
+
+            <div class="service-box">
+              <h4>Download Catalog</h4>
+              <div class="download-catalog">
+                <a href="#"><i class="bi bi-filetype-pdf"></i><span>Catalog PDF</span></a>
+                <a href="#"><i class="bi bi-file-earmark-word"></i><span>Catalog DOC</span></a>
+              </div>
+            </div><!-- End Services List -->
+
+            <div class="help-box d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-headset help-icon"></i>
+              <h4>Have a Question?</h4>
+              <p class="d-flex align-items-center mt-2 mb-0"><i class="bi bi-telephone me-2"></i> <span>+254 76 55488 55</span></p>
+              <p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a href="mailto:contact@example.com">metrine@regina.com</a></p>
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static '\assets\img\child-4617142_1280.jpg' %}" alt="" class="img-fluid services-img">
+            <h3>We specialize in creating visually stunning, user-friendly websites tailored to your brand’s identity. </h3>
+            <p>
+              Whether you need a sleek portfolio site, a business website, or an online store, we’ll design a website that aligns with your goals and engages your audience.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span> Fully custom designs built from scratch</span></li>
+              <li><i class="bi bi-check-circle"></i> <span> Tailored to your brand’s look and feel</span></li>
+              <li><i class="bi bi-check-circle"></i> <span> Optimized for performance and speed</span></li>
+            </ul>
+            <p>
+              Whether you need a sleek portfolio site, a business website, or an online store, we’ll design a website that aligns with your goals and engages your audience.
+            </p>
+            <p>
+              Our web development services focus on creating fast, functional, and scalable websites using modern technologies. We ensure your website is not only beautiful but also robust and easy to maintain.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Service Details Section -->
+
+  </main>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+ 
+
+  {%endblock%}

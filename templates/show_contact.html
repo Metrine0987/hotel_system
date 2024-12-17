@@ -1,0 +1,56 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block title%}  Show Contacts {%endblock%}
+
+{%block content%}
+
+<table class="table table-light table-responsive">
+<thead>
+<tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Subject</th>
+    <th>Message</th>
+</tr>
+</thead>
+
+<tbody>
+    {% for contact in contact %}
+    <tr>
+        <td>{{ contact.name}}</td>
+        <td>{{contact.email}}</td>
+        <td>{{contact.subject}}</td>
+        <td>{{contact.message}}</td>
+        <td>
+         <a href="{%url 'myapp:update_contact' contact.id %}" class="btn btn-primary">Edit</a>
+       <a href="{%url 'myapp:delete_contact' contact.id %}" class="btn btn-danger" 
+       onclick="return confirmDelete(event, '{{ contact.name }}')"
+       >Delete</a>
+      
+       <a href="{%url 'myapp:update_contact' contact.id %}" class="btn btn-primary">Pay</a>
+       </td>
+    </tr>
+    {%endfor%}
+</tbody>
+
+</table>
+
+<script>
+    /**
+     * Display a confirmation dialog before deleting.
+     * @param {Event} e - The click event.
+     * @param {String} name - The name of the contact being deleted.
+     * @returns {Boolean} - Returns false if the user cancels the deletion.
+     */
+    function confirmDelete(e, name) {
+        const userConfirmed = confirm(`Are you sure you want to delete the contact: ${name}?`);
+        if (!userConfirmed) {
+            e.preventDefault(); // Prevent navigation if the user cancels.
+            return false;
+        }
+        
+    }
+  </script>
+
+{%endblock%}
